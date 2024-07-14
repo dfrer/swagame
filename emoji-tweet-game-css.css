@@ -14,10 +14,26 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 600px;
+    width: 100%;
 }
 
 h1 {
     color: #333;
+    margin-bottom: 20px;
+}
+
+#game-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 #tweet-display {
@@ -34,16 +50,32 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     margin: 10px 0;
-    min-height: 50px;
+    min-height: 100px;
+    border: 1px dashed #ccc;
+    padding: 10px;
+}
+
+#scene-builder {
+    position: relative;
+    height: 200px;
 }
 
 .emoji {
     font-size: 24px;
     margin: 5px;
     cursor: pointer;
+    transition: transform 0.2s;
 }
 
-button {
+.emoji:hover {
+    transform: scale(1.2);
+}
+
+.emoji.collected {
+    opacity: 0.5;
+}
+
+button, select {
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -55,8 +87,17 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-button:hover {
+button:hover, select:hover {
     background-color: #45a049;
+}
+
+select {
+    background-color: #008CBA;
+}
+
+select:hover {
+    background-color: #007B9A;
 }
