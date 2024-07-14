@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emoji Tweet Game</title>
+    <title>Enhanced Emoji Tweet Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="game-container">
         <h1>Emoji Tweet Game</h1>
+        <div id="game-controls">
+            <select id="game-mode">
+                <option value="collect">Collect Mode</option>
+                <option value="story">Story Mode</option>
+            </select>
+            <button id="start-game">Start Game</button>
+        </div>
+        <div id="game-info">
+            <span id="score-display">Score: 0</span>
+            <span id="timer-display">Time: 60s</span>
+        </div>
         <div id="tweet-display"></div>
         <div id="emoji-collection"></div>
         <div id="scene-builder"></div>
-        <button id="fetch-tweet">Fetch Tweet</button>
+        <button id="fetch-tweet">Fetch New Tweet</button>
     </div>
     <script src="game.js"></script>
 </body>
